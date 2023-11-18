@@ -1,0 +1,33 @@
+{
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "name": "interviewtask",
+  "version": "1.0.0",
+  "description": "Interview Task API",
+  "main": "listen.mjs",
+  "scripts": {
+    "test": "npm run seed && node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicemos/NC_Account_API.git"
+  },
+  "keywords": [
+    "Applicant details",
+    "applicant profile",
+    "profile",
+    "student",
+    "student profile",
+    "student details",
+    "student personal details",
+    "details",
+    "student data"
+  ],
+  "author": "Mohsin Kaduji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicemos/NC_Account_API/issues"
+  },
+  "homepage": "https://github.com/nicemos/NC_Account_API#readme"
+}
