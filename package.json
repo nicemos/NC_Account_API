@@ -9,7 +9,7 @@
   "transform": {},
   "testEnvironment": "node",
   "engines": {
-    "node": ">=18.00.0"
+    "node": ">=14.20.1"
   },
   "scripts": {
     "test": "npm run seed && node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
