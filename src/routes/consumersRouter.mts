@@ -1,5 +1,18 @@
 import { Router } from "express";
+import {
+    postConsumer,
+    // getConsumerById,
+    getConsumers,
+    // updateConsumerById,
+    deleteConsumerById,
+} from '../controllers/consumer.controller.mjs';
 
-export const consumersRouter:Router = Router();
+const consumersRouter:Router = Router();
 
-consumersRouter.get('/', ()=>'Hello from consumersRouter');
+consumersRouter.post("/", postConsumer);
+// consumersRouter.get("/:id", getConsumerById);
+consumersRouter.get('/', getConsumers);
+// consumersRouter.patch("/:consumer_id", updateConsumerById);
+consumersRouter.delete("/:id", deleteConsumerById);
+
+export { consumersRouter };

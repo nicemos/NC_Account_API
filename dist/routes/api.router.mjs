@@ -8,6 +8,6 @@ apiRouter.use("/bookings", bookingsRouter);
 apiRouter.use("/consumers", consumersRouter);
 apiRouter.use("/providers", providersRouter);
 apiRouter.use("/services", servicesRouter);
-apiRouter.get("/", (req, res) => {
-    res.status(200).send({ success: true, msg: "Hello from the Root" });
+apiRouter.get("/", (_, res) => {
+    res.status(200).send({ success: true, msg: "Endpoints List: " });
 });

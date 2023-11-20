@@ -8,4 +8,4 @@ const serviceSchema = new Schema({
     services_key: { type: String, required: true },
     consumers_key: [{ type: String, ref: ConsumerModel, required: false }]
 });
-export const serviceModel = model("serviceModel", serviceSchema);
+export const ServiceModel = model("serviceModel", serviceSchema);

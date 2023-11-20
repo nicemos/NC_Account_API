@@ -1,9 +1,23 @@
+import { ObjectId } from "mongoose";
+
+export interface booking {
+  key: string;
+  start: string;
+  startTime: number;
+  endTime: number;
+  end: string;
+  notes: string|null;
+  consumer_key: string,
+  consumers_booking_code: string;
+  providers_key: string;
+  services_key: string;
+}
 export interface consumer {
   consumers_address_country: string;
-  consumers_booking_code: number;
+  consumers_booking_code?: string;
   consumers_name: string;
   consumers_pronouns: string;
-  consumers_key: string;
+  consumers_key?: string;
   consumers_email: string;
 }
 
@@ -24,15 +38,3 @@ export interface service {
   consumers_key: string[];
 }
 
-export interface booking {
-  key: string;
-  start: Date;
-  startTime: number;
-  endTime: number;
-  end: Date;
-  notes: string|null;
-  consumer_key: string,
-  consumers_booking_code: number;
-  providers_key: string;
-  services_key: string;
-}

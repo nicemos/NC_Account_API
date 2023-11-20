@@ -1,6 +1,9 @@
 import { Router } from "express";
-export const bookingsRouter = Router();
-// bookingsRouter.post()
-bookingsRouter.get('/', (_, res) => {
-    res.status(404).send({ success: true, msg: "Hello from Bookings" });
-});
+import { postBooking, getBookingById, getBookings, updateBookingById, deleteBookingById } from '../controllers/booking.controller.mjs';
+const bookingsRouter = Router();
+bookingsRouter.post("/", postBooking);
+bookingsRouter.get("/:id", getBookingById);
+bookingsRouter.get('/', getBookings);
+bookingsRouter.patch("/:booking_id", updateBookingById);
+bookingsRouter.delete("/:id", deleteBookingById);
+export { bookingsRouter };

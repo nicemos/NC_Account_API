@@ -1,4 +1,5 @@
 import express from "express";
+import "./db/connection.mjs";
 import cors from "cors";
 import { apiRouter } from "./routes/api.router.mjs";
 const app = express();
