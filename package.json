@@ -2,7 +2,7 @@
   "name": "interviewtask",
   "version": "1.0.0",
   "description": "Interview Task API",
-  "url": "https://nc-accounts.onrender.com", 
+  "url": "https://nc-accounts.onrender.com",
   "urlLocal": "http://localhost:7000/api",
   "main": "listen.mjs",
   "type": "module",
