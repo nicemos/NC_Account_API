@@ -6,6 +6,11 @@
   "urlLocal": "http://localhost:7000/api",
   "main": "listen.mjs",
   "type": "module",
+  "transform": {},
+  "testEnvironment": "node",
+  "engines": {
+    "node": ">=18.00.0"
+  },
   "scripts": {
     "test": "npm run seed && node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "build": "npx tsc",
