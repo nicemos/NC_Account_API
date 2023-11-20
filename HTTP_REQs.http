@@ -1,5 +1,5 @@
-# @baseUrl = http://localhost:7000/api
-@baseUrl = https://nc-accounts.onrender.com/api
+@baseUrl = http://localhost:7000/api
+# @baseUrl = https://nc-accounts.onrender.com/api
 
 ### POST a booking
 post {{baseUrl}}/bookings
