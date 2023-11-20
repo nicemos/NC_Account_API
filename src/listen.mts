@@ -2,4 +2,4 @@ import app from './app.mjs'
 
 const { PORT = 9090 } = process.env;
 
-app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}/api/`));
+app.listen(PORT, () => console.log(`Listening on https://nc-accounts.onrender.com/api`));
