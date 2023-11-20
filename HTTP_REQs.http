@@ -1,11 +1,11 @@
 # @baseUrl = http://localhost:7000/api
-@baseUrl = http://localhost:7000/api
+@baseUrl = https://nc-accounts.onrender.com/api
 
 ### POST a booking
 post {{baseUrl}}/bookings
 Content-Type: application/json
 
-{"booking":{
+{
 "key": "First key",
 "start": "2023-11-14T10:00:00Z",
 "startTime": "1699956000000",
@@ -15,7 +15,7 @@ Content-Type: application/json
 "consumer_key": "c7f171665c73b",
 "providers_key": "r3be41",
 "services_key": "05451ab7"
-}}
+}
 
 
 ###
