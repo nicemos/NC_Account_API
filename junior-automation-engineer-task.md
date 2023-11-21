@@ -1,12 +1,12 @@
-# Interview Task -
+# Interview Task - Junior Automation Engineer
 
 ## Objective:
 
-Explain how you would approach automating some key tasks that form part of the Company bootcamp Entry Challenge (EC) booking system. The overall goal being to improve the EC booking process and communication of information to the different Company teams involved. This should take into account the data available, the stakeholders, and the platforms involved.
+Explain how you would approach automating some key tasks that form part of the Northcoders bootcamp Entry Challenge (EC) booking system. The overall goal being to improve the EC booking process and communication of information to the different Northcoders teams involved. This should take into account the data available, the stakeholders, and the platforms involved.
 
 ## Background:
 
-Over the past 12 months we have implemented a new system for handling EC bookings, where applicants to Company courses make a booking on [Setmore](https://www.setmore.com/) (you may have already used this during your own application process!), which triggers an automated workflow on [Zapier](https://zapier.com/), a low-code platform that allows us to connect together a number of different services and platforms across Company through automation. (You can make a Zapier account for free if you want to try it out!)
+Over the past 12 months we have implemented a new system for handling EC bookings, where applicants to Northcoders courses make a booking on [Setmore](https://www.setmore.com/) (you may have already used this during your own application process!), which triggers an automated workflow on [Zapier](https://zapier.com/), a low-code platform that allows us to connect together a number of different services and platforms across Northcoders through automation. (You can make a Zapier account for free if you want to try it out!)
 
 ## Data Sample:
 
@@ -27,13 +27,13 @@ Below is an example of the data available to Zapier from a Setmore booking for a
   "consumers_key": "c7f171665c73b3389f42f70da7830b8fd",
   "consumers_email": "sally@jones.com",
   "providers_address_country": "GBR",
-  "providers_name": "Company Classroom",
+  "providers_name": "Northcoders Classroom",
   "providers_key": "r3be41663760878108",
-  "providers_email": "Company@classroom.com",
+  "providers_email": "northcoders@classroom.com",
   "services_duration": 90,
   "services_cost": 0,
-  "services_title": "Company Entry Challenge",
-  "services_descriptions": "Your Company Entry Challenge! The first 60 minutes will be your Challenge, with time after for a chat with one of our Tutors.",
+  "services_title": "Northcoders Entry Challenge",
+  "services_descriptions": "Your Northcoders Entry Challenge! The first 60 minutes will be your Challenge, with time after for a chat with one of our Tutors.",
   "services_key": "05451ab7-be63-4cff-9965-7cd1ae3"
 }
 ```
@@ -46,7 +46,7 @@ Using the data available, tell us how we could achieve the following tasks:
 
 1. Notifying the **NC Onboarding Team** when a booking is made (and any relevant details about the booking), so that they can keep track of the person’s application progress,
 2. Informing the **NC Classroom Team** about the booking (and any relevant details), so they know who to contact on Slack when the person’s Entry Challenge finishes.
-3. Updating the **applicant**’s Company Account with the details of the Entry Challenge they have just booked, so we can display the relevant details to them when they log in to their Account.
+3. Updating the **applicant**’s Northcoders Account with the details of the Entry Challenge they have just booked, so we can display the relevant details to them when they log in to their Account.
 
 We're interested in knowing:
 
@@ -68,4 +68,4 @@ We look forward to seeing what you come up with!
 > - **Google Calendar**, used by the Classroom & Onboarding teams (each team has their own calendar, plus both teams have access to a joint calendar)
 > - **Slack**, used by the entire business
 > - **Hubspot** (a Customer Relationship Management platform used by the Onboarding team, that records key information about applicants and which stage they are at in the application process)
-> - **The Company Account API** (which contains information about applicants such as their name, contact details, application progress and so on. This is then shown to the applicant on their Account Dashboard, where they can see what’s coming up next in their application process)
+> - **The Northcoders Account API** (which contains information about applicants such as their name, contact details, application progress and so on. This is then shown to the applicant on their Account Dashboard, where they can see what’s coming up next in their application process)

@@ -24,19 +24,20 @@ get {{baseUrl}}/bookings
 
 ###
 # Delete a bookingById
-delete {{baseUrl}}/bookings/655b4acbd24e864036251aa0
+delete {{baseUrl}}/bookings/655c6cc821118c3c421fcb59
 
 
 ### POST a consumer
 post {{baseUrl}}/consumers
 Content-Type: application/json
 
-{"consumer":{
-    "consumers_address_country": "GBR",
+{
     "consumers_name": "Mike",
     "consumers_pronouns": "He/Him",
-    "consumers_email": "mike@hotmail.com"
-}}
+    "consumers_email": "mike@hotmail.com",
+    "consumers_address_country": "GBR",
+    "consumer_key": "txt123GenretedBySetmore"
+}
 
 ###
 # GET all consumers

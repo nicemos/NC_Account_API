@@ -1,10 +1,13 @@
 import { BookingModel } from "../schemas/bookingSchema.mjs";
-import { v4 as uuidv4 } from "uuid";
+import generateUniqueId from "generate-unique-id";
 export const postBooking = (req, res) => {
-    console.log('req.body: ', req.body);
-    const booking = req.body;
-    console.log('booking: ', booking);
-    booking.consumers_booking_code = uuidv4();
+    const booking = Object.assign({}, req.body);
+    booking.consumers_booking_code = generateUniqueId({
+        length: 8,
+        useLetters: false,
+        // includeSymbols: ["@", "#", "|"],
+        // excludeSymbols: ["0"],
+    });
     BookingModel.create(booking)
         .then((booking) => {
         res.status(200).send({
@@ -46,8 +49,7 @@ export const getBookings = (req, res) => {
         res.sendStatus(400);
     });
 };
-export const updateBookingById = () => {
-};
+export const updateBookingById = () => { };
 export const deleteBookingById = (req, res) => {
     const { id } = req.params;
     console.log("id: ", id);

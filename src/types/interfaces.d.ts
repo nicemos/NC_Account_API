@@ -14,10 +14,10 @@ export interface booking {
 }
 export interface consumer {
   consumers_address_country: string;
-  consumers_booking_code?: string;
+  consumers_booking_code?: number;
   consumers_name: string;
   consumers_pronouns: string;
-  consumers_key?: string;
+  consumer_key?: number;
   consumers_email: string;
 }
 

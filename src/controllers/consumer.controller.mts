@@ -1,10 +1,15 @@
 import { Request, Response } from "express";
 import { ConsumerModel } from "../schemas/consumerSchema.mjs";
-import { v4 as uuidv4 } from "uuid";
+import generateUniqueId from 'generate-unique-id';
 
 export const postConsumer = (req: Request, res: Response) => {
-  let { consumer } = req.body;
-  consumer.consumers_consumer_code = uuidv4();
+  let consumer = {...req.body};
+  consumer.consumers_booking_code = +generateUniqueId({
+    length: 8,
+    useLetters: false,
+    // includeSymbols: ["@", "#", "|"],
+    // excludeSymbols: ["0"],
+  });
   ConsumerModel.create(consumer)
     .then((consumer) => {
       res.status(200).send({

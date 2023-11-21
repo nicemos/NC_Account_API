@@ -1,14 +1,13 @@
 import { Schema, model } from "mongoose";
 import { consumer } from "../types/interfaces.js";
-import { BookingModel } from "./bookingSchema.mjs";
 
 const consumerSchema = new Schema<consumer>({
-  consumers_address_country: { type: String, required: true },
-  consumers_booking_code: { type: String, ref:BookingModel, required: true },
   consumers_name: { type: String, required: true },
   consumers_pronouns: { type: String, required: true },
-  consumers_key: { type: String, ref:BookingModel, required: true },
   consumers_email: { type: String, required: true },
+  consumers_address_country: { type: String, default:'GBR', required: true },
+  consumers_booking_code: { type: Number, required: true },
+  consumer_key: { type: String, required: true },
 });
 
 export const ConsumerModel = model("ConsumerModel", consumerSchema);
