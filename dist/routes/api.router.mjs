@@ -9,5 +9,5 @@ apiRouter.use("/consumers", consumersRouter);
 apiRouter.use("/providers", providersRouter);
 apiRouter.use("/services", servicesRouter);
 apiRouter.get("/", (_, res) => {
-    res.status(200).send({ success: true, msg: "Endpoints List: " });
+    res.status(200).send({ success: true, message: "Endpoints List: " });
 });

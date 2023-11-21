@@ -5,7 +5,7 @@ export const postConsumer = (req, res) => {
         .then((consumer) => {
         res.status(200).send({
             success: true,
-            msg: "New consumer is created",
+            message: "New consumer is created",
             consumer_id: consumer._id,
         });
     })
@@ -30,7 +30,7 @@ export const deleteConsumerById = (req, res) => {
         .then((data) => {
         res.status(200).send({
             success: true,
-            msg: "The consumer has been deleted",
+            message: "The consumer has been deleted",
             consumer_id: data ? data._id : null
         });
     })

@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/api", apiRouter);
 
 app.all("*", (_: Request, res: Response) => {
-  res.status(404).send({ success: false, msg: "Not found" });
+  res.status(404).send({ success: false, message: "Not found" });
 });
 
 export default app;

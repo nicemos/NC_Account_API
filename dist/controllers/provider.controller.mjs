@@ -5,7 +5,7 @@ export const postProvider = (req, res) => {
         .then((provider) => {
         res.status(200).send({
             success: true,
-            msg: "New provider is created",
+            message: "New provider is created",
             provider_id: provider._id,
         });
     })
@@ -30,7 +30,7 @@ export const deleteProviderById = (req, res) => {
         .then((data) => {
         res.status(200).send({
             success: true,
-            msg: "The provider has been deleted",
+            message: "The provider has been deleted",
             provider_id: data ? data._id : null
         });
     })

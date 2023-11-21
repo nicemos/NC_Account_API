@@ -5,7 +5,7 @@ export const postService = (req, res) => {
         .then((service) => {
         res.status(200).send({
             success: true,
-            msg: "New service is created",
+            message: "New service is created",
             service_id: service._id,
         });
     })
@@ -30,7 +30,7 @@ export const deleteServiceById = (req, res) => {
         .then((data) => {
         res.status(200).send({
             success: true,
-            msg: "The service has been deleted",
+            message: "The service has been deleted",
             service_id: data ? data._id : null
         });
     })

@@ -12,7 +12,7 @@ export const postBooking = (req, res) => {
         .then((booking) => {
         res.status(200).send({
             success: true,
-            msg: "New booking is created",
+            message: "New booking is created",
             booking_id: booking._id,
         });
     })
@@ -27,12 +27,12 @@ export const getBookingById = (req, res) => {
         .then((booking) => {
         res.status(200).send({
             success: true,
-            msg: "Matched record",
+            message: "Matched record",
             booking,
         });
     })
         .catch((e) => {
-        res.status(404).send({ msg: "Not Found" });
+        res.status(404).send({ message: "Not Found" });
     });
 };
 export const getBookings = (req, res) => {
@@ -40,7 +40,7 @@ export const getBookings = (req, res) => {
         .then((bookings) => {
         res.status(200).json({
             success: true,
-            msg: "All ",
+            message: "All ",
             bookings,
         });
     })
@@ -58,7 +58,7 @@ export const deleteBookingById = (req, res) => {
         console.log("data: ", data);
         res.status(200).send({
             success: true,
-            msg: "The booking record has been deleted",
+            message: "The booking record has been deleted",
             booking_id: data ? data._id : null,
         });
     })
