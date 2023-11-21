@@ -12,4 +12,4 @@ const serviceSchema = new Schema<service>({
     consumers_key: [{type:Array, ref: ConsumerModel, required:false }]
 });
 
-export const ServiceModel = model("serviceModel", serviceSchema);
+export const ServiceModel = model("Services", serviceSchema);
