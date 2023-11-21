@@ -10,4 +10,4 @@ const consumerSchema = new Schema<consumer>({
   consumer_key: { type: String, required: true },
 });
 
-export const ConsumerModel = model("ConsumerModel", consumerSchema);
+export const ConsumerModel = model("Consumers", consumerSchema);
