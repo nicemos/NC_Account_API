@@ -1,5 +1,5 @@
-# @baseUrl = http://localhost:7000/api
-@baseUrl = https://nc-accounts.onrender.com/api
+@baseUrl = http://localhost:7000/api
+# @baseUrl = https://nc-accounts.onrender.com/api
 
 ### POST a booking
 post {{baseUrl}}/bookings
@@ -36,7 +36,8 @@ Content-Type: application/json
     "consumers_pronouns": "He/Him",
     "consumers_email": "mike@hotmail.com",
     "consumers_address_country": "GBR",
-    "consumer_key": "txt123GenretedBySetmore"
+    "consumers_key": "txt123GenretedBySetmore",
+    "consumers_booking_code": 12345
 }
 
 ###

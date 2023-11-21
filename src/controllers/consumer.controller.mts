@@ -19,9 +19,6 @@ export const postConsumer = (req: Request, res: Response) => {
 
 export const getConsumers = (req: Request, res: Response) => {
   ConsumerModel.find()
-    .populate("consumers_booking_code")
-    .populate("consumers_key", "consumers_key")
-    .exec()
     .then((consumers) => {
       res.status(200).json({ consumers });
     })
