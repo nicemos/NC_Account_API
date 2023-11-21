@@ -67,3 +67,25 @@ get {{baseUrl}}/providers
 ###
 # Delete a providerById
 delete {{baseUrl}}/providers/655d19aa0c65ee10bb2566f3
+
+### POST a service
+post {{baseUrl}}/services
+Content-Type: application/json
+
+{
+    "services_duration": 90,
+    "services_cost": 0,
+    "services_title": "txt123GenretedBySetmore",
+    "services_descriptions": "Abcdefghi",
+    "services_key": "5451ab7-be63",
+    "providers_key": "5451ab7",
+    "consumers_key": ["txt123GenretedBySetmore"]
+}
+
+###
+# GET all services
+get {{baseUrl}}/services
+
+###
+# Delete a serviceById
+delete {{baseUrl}}/services/655d19aa0c65ee10bb2566f3

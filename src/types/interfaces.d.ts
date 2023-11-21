@@ -30,11 +30,12 @@ export interface provider {
 }
 
 export interface service {
-  services_duration: string;
-  services_cost: string;
+  services_duration: number;
+  services_cost: number;
   services_title: string;
   services_descriptions: string;
   services_key: string;
+  providers_key: string;
   consumers_key: string[];
 }
 
