@@ -56,8 +56,8 @@ Content-Type: application/json
 {
     "providers_name": "Mike",
     "providers_email": "mike@hotmail.com",
-    "provider_key": "txt123GenretedBySetmore",
-    "service_key": "txt123GenretedBySetmore"
+    "providers_key": "txt123GenretedBySetmore",
+    "services_key": ["txt123GenretedBySetmore"]
 }
 
 ###
@@ -66,4 +66,4 @@ get {{baseUrl}}/providers
 
 ###
 # Delete a providerById
-delete {{baseUrl}}/providers/655b0a1b7e392f769b5d78a8
+delete {{baseUrl}}/providers/655d19aa0c65ee10bb2566f3
