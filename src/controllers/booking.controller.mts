@@ -4,8 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export const postBooking = (req: Request, res: Response) => {
   console.log('req.body: ', req.body);
-  let {data} = req.body;
-  const booking = {...data};
+  const booking = req.body;
   console.log('booking: ', booking);
   booking.consumers_booking_code = uuidv4();
   BookingModel.create(booking)
