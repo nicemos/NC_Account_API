@@ -1,15 +1,8 @@
 import { Request, Response } from "express";
 import { ConsumerModel } from "../schemas/consumerSchema.mjs";
-import generateUniqueId from 'generate-unique-id';
 
 export const postConsumer = (req: Request, res: Response) => {
   let consumer = {...req.body};
-  consumer.consumers_booking_code = +generateUniqueId({
-    length: 8,
-    useLetters: false,
-    // includeSymbols: ["@", "#", "|"],
-    // excludeSymbols: ["0"],
-  });
   ConsumerModel.create(consumer)
     .then((consumer) => {
       res.status(200).send({
@@ -26,7 +19,7 @@ export const postConsumer = (req: Request, res: Response) => {
 
 export const getConsumers = (req: Request, res: Response) => {
   ConsumerModel.find()
-    .populate("consumers_booking_code", "consumers_booking_code")
+    .populate("consumers_booking_code")
     .populate("consumers_key", "consumers_key")
     .exec()
     .then((consumers) => {

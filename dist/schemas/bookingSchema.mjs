@@ -11,4 +11,4 @@ const bookingSchema = new Schema({
     providers_key: { type: String, required: true },
     services_key: { type: String, required: true },
 });
-export const BookingModel = model("BookingModel", bookingSchema);
+export const BookingModel = model("Bookings", bookingSchema);

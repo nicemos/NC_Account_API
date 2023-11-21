@@ -46,3 +46,23 @@ get {{baseUrl}}/consumers
 ###
 # Delete a consumerById
 delete {{baseUrl}}/consumers/655b0a1b7e392f769b5d78a8
+
+
+### POST a provider
+post {{baseUrl}}/providers
+Content-Type: application/json
+
+{
+    "providers_name": "Mike",
+    "providers_email": "mike@hotmail.com",
+    "provider_key": "txt123GenretedBySetmore",
+    "service_key": "txt123GenretedBySetmore"
+}
+
+###
+# GET all providers
+get {{baseUrl}}/providers
+
+###
+# Delete a providerById
+delete {{baseUrl}}/providers/655b0a1b7e392f769b5d78a8
