@@ -4,7 +4,7 @@ import generateUniqueId from "generate-unique-id";
 
 export const postBooking = (req: Request, res: Response) => {
   const booking = {...req.body};
-  booking.consumers_booking_code = generateUniqueId({
+  booking.consumers_booking_code = +generateUniqueId({
     length: 8,
     useLetters: false,
     // includeSymbols: ["@", "#", "|"],
@@ -53,6 +53,9 @@ export const getBookings = (req: Request, res: Response) => {
       res.sendStatus(400);
     });
 };
+export const getCompleteBookingByBookingRef = (req: Request, res: Response) => {
+ 
+}
 
 export const updateBookingById = () => {};
 

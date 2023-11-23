@@ -2,7 +2,7 @@ import { BookingModel } from "../schemas/bookingSchema.mjs";
 import generateUniqueId from "generate-unique-id";
 export const postBooking = (req, res) => {
     const booking = Object.assign({}, req.body);
-    booking.consumers_booking_code = generateUniqueId({
+    booking.consumers_booking_code = +generateUniqueId({
         length: 8,
         useLetters: false,
         // includeSymbols: ["@", "#", "|"],
@@ -48,6 +48,8 @@ export const getBookings = (req, res) => {
         console.log(err);
         res.sendStatus(400);
     });
+};
+export const getCompleteBookingByBookingRef = (req, res) => {
 };
 export const updateBookingById = () => { };
 export const deleteBookingById = (req, res) => {

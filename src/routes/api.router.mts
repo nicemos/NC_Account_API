@@ -5,7 +5,7 @@ import { providersRouter } from "./providersRouter.mjs";
 import { servicesRouter } from "./servicesRouter.mjs";
 
 export const apiRouter: Router = Router();
-
+console.log('inside apiRouter');
 apiRouter.use("/bookings", bookingsRouter);
 apiRouter.use("/consumers", consumersRouter);
 apiRouter.use("/providers", providersRouter);
