@@ -3,20 +3,20 @@ import { BookingModel } from "../schemas/bookingSchema.mjs";
 import generateUniqueId from "generate-unique-id";
 
 export const postBooking = (req: Request, res: Response) => {
-  const booking = {...req.body};
+  const booking = { ...req.body };
   booking.consumers_booking_code = +generateUniqueId({
     length: 8,
     useLetters: false,
     // includeSymbols: ["@", "#", "|"],
     // excludeSymbols: ["0"],
   });
-  console.log('typeof booking.consumers_booking_code: ', typeof booking.consumers_booking_code);
   BookingModel.create(booking)
     .then((booking) => {
       res.status(200).send({
         success: true,
         message: "New booking is created",
         booking_id: booking._id,
+        consumers_booking_code: booking.consumers_booking_code
       });
     })
     .catch((err) => {
@@ -55,8 +55,51 @@ export const getBookings = (req: Request, res: Response) => {
     });
 };
 export const getCompleteBookingByBookingRef = (req: Request, res: Response) => {
- 
-}
+  const refId = req.params;
+  console.log("refId: ", refId);
+  BookingModel.aggregate([
+    { $match: { consumers_booking_code: 69354242 } },
+    {
+      
+      $lookup: {
+        from: "consumers",
+        localField: "consumers_booking_code",
+        foreignField: "consumers_booking_code",
+        as: "consumers_data",
+      },
+    },
+    {
+      
+      $lookup: {
+        from: "providers",
+        localField: "providers_key",
+        foreignField: "providers_key",
+        as: "providers_data",
+      },
+    },
+    {
+      
+      $lookup: {
+        from: "services",
+        localField: "services_key",
+        foreignField: "services_key",
+        as: "service_data",
+      },
+    },
+  ])
+    .then((bookings) => {
+      console.log("bookings: ", bookings);
+      res.status(200).json({
+        success: true,
+        message: "selected ",
+        bookings,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(400);
+    });
+};
 
 export const updateBookingById = () => {};
 

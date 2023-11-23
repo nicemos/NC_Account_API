@@ -24,11 +24,15 @@ get {{baseUrl}}/bookings
 
 ###
 # GET selected fields from bookings and consumers of a booking id
-get {{baseUrl}}/bookings/selected/59891869
+get {{baseUrl}}/bookings/selected/69354242
+
+###
+# GET bookings id
+get {{baseUrl}}/bookings/655f4f8a7a0bf99b9357a156
 
 ###
 # Delete a bookingById
-delete {{baseUrl}}/bookings/655c6cc821118c3c421fcb59
+delete {{baseUrl}}/bookings/655f4f8a7a0bf99b9357a156
 
 
 ### POST a consumer
