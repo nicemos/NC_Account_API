@@ -26,6 +26,7 @@ export interface provider {
   providers_name: string;
   providers_key: string;
   providers_email: string;
+  consumers_booking_code: number;
   services_key: string[];
 }
 
@@ -36,6 +37,7 @@ export interface service {
   services_descriptions: string;
   services_key: string;
   providers_key: string;
+  consumers_booking_code: number;
   consumers_key: string[];
 }
 

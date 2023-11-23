@@ -23,7 +23,7 @@ export const postBooking = (req, res) => {
     });
 };
 export const getBookingById = (req, res) => {
-    let { id } = req.params;
+    const { id } = req.params;
     BookingModel.findById(id)
         .then((booking) => {
         res.status(200).send({
@@ -51,10 +51,9 @@ export const getBookings = (req, res) => {
     });
 };
 export const getCompleteBookingByBookingRef = (req, res) => {
-    const refId = req.params;
-    console.log("refId: ", refId);
+    const { refId } = req.params;
     BookingModel.aggregate([
-        { $match: { consumers_booking_code: 69354242 } },
+        { $match: { consumers_booking_code: +refId } },
         {
             $lookup: {
                 from: "consumers",
@@ -66,16 +65,16 @@ export const getCompleteBookingByBookingRef = (req, res) => {
         {
             $lookup: {
                 from: "providers",
-                localField: "providers_key",
-                foreignField: "providers_key",
+                localField: "consumers_booking_code",
+                foreignField: "consumers_booking_code",
                 as: "providers_data",
             },
         },
         {
             $lookup: {
                 from: "services",
-                localField: "services_key",
-                foreignField: "services_key",
+                localField: "consumers_booking_code",
+                foreignField: "consumers_booking_code",
                 as: "service_data",
             },
         },

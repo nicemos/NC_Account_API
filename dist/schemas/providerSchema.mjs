@@ -5,6 +5,7 @@ const providerSchema = new Schema({
     providers_name: { type: String, required: true },
     providers_key: { type: String, required: true },
     providers_email: { type: String, required: true },
+    consumers_booking_code: { type: Number, required: true },
     services_key: [{ type: Array, ref: ServiceModel, required: true }]
 });
 export const ProviderModel = model("Providers", providerSchema);

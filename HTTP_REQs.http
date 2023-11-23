@@ -24,7 +24,7 @@ get {{baseUrl}}/bookings
 
 ###
 # GET selected fields from bookings and consumers of a booking id
-get {{baseUrl}}/bookings/selected/69354242
+get {{baseUrl}}/bookings/selected/50620206
 
 ###
 # GET bookings id
