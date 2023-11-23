@@ -8,6 +8,7 @@ export const postBooking = (req, res) => {
         // includeSymbols: ["@", "#", "|"],
         // excludeSymbols: ["0"],
     });
+    console.log('typeof booking.consumers_booking_code: ', typeof booking.consumers_booking_code);
     BookingModel.create(booking)
         .then((booking) => {
         res.status(200).send({

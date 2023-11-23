@@ -8,7 +8,7 @@ export interface booking {
   end: string;
   notes: string|null;
   consumers_key: string,
-  consumers_booking_code: string;
+  consumers_booking_code: number;
   providers_key: string;
   services_key: string;
 }

@@ -12,7 +12,7 @@ Content-Type: application/json
 "endTime": "1699961400000",
 "end": "2023-11-14T11:30:00Z",
 "notes": "First Notes",
-"consumer_key": "c7f171665c73b",
+"consumers_key": "c7f171665c73",
 "providers_key": "r3be41",
 "services_key": "05451ab7"
 }
