@@ -59,7 +59,7 @@ export const getCompleteBookingByBookingRef = (req, res) => {
                 from: "consumers",
                 localField: "consumers_booking_code",
                 foreignField: "consumers_booking_code",
-                as: "consumers_data",
+                as: "consumer",
             },
         },
         {
@@ -67,7 +67,7 @@ export const getCompleteBookingByBookingRef = (req, res) => {
                 from: "providers",
                 localField: "consumers_booking_code",
                 foreignField: "consumers_booking_code",
-                as: "providers_data",
+                as: "provider",
             },
         },
         {
@@ -75,16 +75,15 @@ export const getCompleteBookingByBookingRef = (req, res) => {
                 from: "services",
                 localField: "consumers_booking_code",
                 foreignField: "consumers_booking_code",
-                as: "service_data",
+                as: "service",
             },
         },
     ])
-        .then((bookings) => {
-        console.log("bookings: ", bookings);
+        .then((booking) => {
         res.status(200).json({
             success: true,
             message: "selected ",
-            bookings,
+            booking,
         });
     })
         .catch((err) => {
